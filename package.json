@@ -1,0 +1,26 @@
+{
+  "name": "purecloud-chat-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "parcel build src/index.html --public-url ./",
+    "deploy": "gh-pages -d dist",
+    "start": "parcel dist/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krismrp/purecloud-chat-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krismrp/purecloud-chat-demo/issues"
+  },
+  "homepage": "https://krismrp.github.io/purecloud-chat-demo",
+  "devDependencies": {
+    "gh-pages": "^1.2.0",
+    "parcel-bundler": "^1.9.7"
+  }
+}
