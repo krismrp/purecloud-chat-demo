@@ -66,7 +66,10 @@ $(document).ready(function initializeChat() {
 
         // Alternatively, call webchat.renderPopup here. Note that reconnects do not apply to popup chat.
         webchat.renderFrame({
-          containerEl: "chat-container"
+          // containerEl: "chat-container",
+          width: 400,
+          height: 400,
+          newTab: true
         });
       };
     })
