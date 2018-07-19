@@ -7,14 +7,11 @@ $(document).ready(function initializeChat() {
     queueName: "TEST_RnD",
     logLevel: "DEBUG",
     locale: "en",
+    reconnectEnabled: true,
+    reconnectOrigins: ['https://krismrp.github.io/purecloud-chat-demo/'],
     data: {
       firstName: "Henry",
       lastName: "Pacciani",
-      addressStreet: "1488 Odiwez Manor",
-      addressCity: "Curzekzi",
-      addressPostalCode: "71166",
-      addressState: "AK",
-      phoneNumber: "(226) 860-7977"
     },
     companyLogo: {
       width: 600,
@@ -56,6 +53,7 @@ $(document).ready(function initializeChat() {
       if (webchat.isAutoJoined()) {
         // Do something to disable chat button
       }
+
       chatButton.onclick = function() {
         var firstName = document.getElementById("first-name").value;
         var lastName = document.getElementById("last-name").value;
@@ -64,21 +62,7 @@ $(document).ready(function initializeChat() {
         webchat.getConfig().setData({
           firstName: firstName,
           lastName: lastName,
-          // addressStreet: "64472 Brown Street",
-          // addressCity: "Lindgrenmouth",
-          // addressPostalCode: "50163-2735",
-          // addressState: "FL",
-          // phoneNumber: "1-916-892-2045 x293",
-          // phoneType: "Cell",
-          // customerId: 59606
         });
-
-        // //Use the updateConfig function to update batches of properties by passing in a partially filled chatConfig object
-        // webchat.updateConfig({
-        //   agentEmail: "debrah.agent@example.com",
-        //   locale: "es",
-        //   welcomeMessage: "Welcome to Example support"
-        // });
 
         // Alternatively, call webchat.renderPopup here. Note that reconnects do not apply to popup chat.
         webchat.renderFrame({
