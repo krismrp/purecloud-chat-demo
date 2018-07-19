@@ -167,10 +167,10 @@ $(document).ready(function initializeChat() {
 
       // Alternatively, call webchat.renderPopup here. Note that reconnects do not apply to popup chat.
       webchat.renderFrame({
-        // containerEl: "chat-container",
-        width: 400,
-        height: 400,
-        newTab: true
+        containerEl: "chat-container"
+        // width: 400,
+        // height: 400,
+        // newTab: true
       });
     };
   }).catch(function (err) {
@@ -206,7 +206,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '60972' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '62145' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
