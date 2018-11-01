@@ -33,6 +33,9 @@ $(document).ready(function initializeChat() {
     css: {
       width: '100%',
       height: '100%'
+    },
+    cobrowseConfig: {
+      deploymentKey: 'bsBzs9e9CIWM8hU960VYLyPs4V0eaSL2'
     }
   };
 
@@ -63,7 +66,7 @@ $(document).ready(function initializeChat() {
 
         // Alternatively, call webchat.renderPopup here. Note that reconnects do not apply to popup chat.
         webchat.renderFrame({
-          containerEl: "chat-container",
+          containerEl: 'chat-container'
           // width: 400,
           // height: 400,
           // newTab: true
